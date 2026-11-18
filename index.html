@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anna Finyk — Photographer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Pinyon+Script&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--g:#3A4535;--g2:#2F382B;--c:#EFECE4;--c2:#F7F5EF;--p:#E8C4C0;--p2:#B9817B;--ink:#2F382B;--mute:#626A58}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--c);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.35em;text-transform:uppercase;font-weight:400}
+.h{font-weight:500;text-transform:uppercase;letter-spacing:.12em;line-height:1.1;margin:0}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;text-transform:none;letter-spacing:0}
+.serif{font-family:'Cormorant Garamond',serif;font-style:italic}
+.btn{display:inline-block;padding:16px 34px;border:1px solid currentColor;text-decoration:none;font-size:12px;letter-spacing:.3em;text-transform:uppercase;transition:.25s}
+.btn:hover{background:var(--p);color:var(--g2);border-color:var(--p)}
+.btn.solid{background:var(--p);color:var(--g2);border-color:var(--p)}
+.btn.solid:hover{background:transparent;color:var(--c)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:.3s}
+nav.scrolled{background:rgba(58,69,53,.96);backdrop-filter:blur(6px)}
+.navin{display:flex;align-items:center;justify-content:space-between;height:72px;color:var(--c)}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.logo b{font-weight:400;font-size:11px;letter-spacing:.4em}
+.logo span{font-family:'Pinyon Script',cursive;font-size:30px;margin-top:-2px}
+.links{display:flex;gap:28px;align-items:center}
+.links a{text-decoration:none;font-size:11px;letter-spacing:.25em;text-transform:uppercase}
+.links a:hover{color:var(--p)}
+.lang{display:flex;border:1px solid rgba(239,236,228,.5)}
+.lang button{background:none;border:0;color:var(--c);font:inherit;font-size:11px;letter-spacing:.2em;padding:8px 12px;cursor:pointer;min-height:36px}
+.lang button.on{background:var(--p);color:var(--g2)}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.links a{display:none}}
+/* hero */
+.hero{position:relative;height:100vh;min-height:620px;color:var(--c);display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(36,44,33,.88) 0%,rgba(36,44,33,.25) 55%,rgba(36,44,33,.35) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:90px;width:100%}
+.hero h1{font-size:clamp(40px,7vw,92px)}
+.hero h1 span[data-i="heroH"]{font-weight:500}
+.hero h1 .script{display:block;font-size:clamp(48px,8vw,110px);color:var(--p);margin-top:-.15em}
+.hero p{max-width:560px;font-size:16px;margin:22px 0 34px}
+.lines{position:absolute;inset:0;z-index:1;pointer-events:none}
+/* sections */
+section{padding:110px 0}
+#content{padding-top:30px}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){section{padding:64px 0}#content{padding-top:24px}#content .about{grid-template-columns:1fr!important}}
+.title{text-align:center;margin-bottom:56px}
+.title .h{font-size:clamp(30px,4vw,48px);margin-top:14px}
+.title .eyebrow{color:var(--p2)}
+.rule{width:80px;height:1px;background:var(--p2);margin:22px auto 0}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.about .h{font-size:clamp(28px,3.5vw,44px);margin:14px 0 24px}
+.stats{display:flex;gap:44px;margin:34px 0 0;flex-wrap:wrap}
+.stats div{border-top:1px solid var(--p2);padding-top:12px}
+.stats b{display:block;font-family:'Rubik',sans-serif;font-weight:300;font-size:40px;line-height:1;color:var(--g)}
+.stats span{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute)}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.about{grid-template-columns:1fr;gap:40px}}
+.ctlist{list-style:none;padding:0;margin:18px 0}
+.ctlist li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid rgba(58,69,53,.12)}
+.ctlist li:before{content:"";position:absolute;left:0;top:20px;width:14px;height:1px;background:var(--p2)}
+.ctgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ctgrid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.ctgrid:empty{display:none}
+.ctgrid .slides{aspect-ratio:3/4}
+/* services */
+.pkg .pslides{aspect-ratio:auto;height:100%;min-height:420px}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.pkg .pslides{min-height:340px}}
+.mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;overflow:hidden}
+.mini img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;min-width:0;max-width:100%}
+.slides{position:relative;aspect-ratio:4/5;overflow:hidden;width:100%}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.slides img.on{opacity:1}
+.dark{background:var(--g);color:var(--c)}
+.dark .title .eyebrow{color:var(--p)}
+.dark .rule{background:var(--p)}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media(max-width:1180px),(pointer:coarse) and (max-width:1400px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:var(--c2);color:var(--ink);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card .in{padding:30px 28px 32px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card h3{margin:0;font-weight:500;font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+.card .price{font-family:'Rubik',sans-serif;font-weight:300;font-size:32px;color:var(--p2);line-height:1}
+.card ul{margin:6px 0 0;padding:0;list-style:none;font-size:14px}
+.card li{padding:6px 0 6px 26px;position:relative}
+.card li:before{content:"";position:absolute;left:0;top:16px;width:14px;height:1px;background:var(--g)}
+.card .note{margin-top:auto;padding-top:14px;font-size:12px;color:var(--mute)}
+@media(max-width:960px),(pointer:coarse) and (max-width:1400px){.svc{grid-template-columns:1fr}}
+/* weddings */
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.tabs button{background:none;border:1px solid var(--g);color:var(--g);font:inherit;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:13px 20px;cursor:pointer;min-height:44px}
+.tabs button.on{background:var(--g);color:var(--c)}
+.pkg{display:none;grid-template-columns:1fr 1.15fr;gap:0;background:var(--c2)}
+.pkg.on{display:grid}
+.pkg img{width:100%;height:100%;min-height:420px;object-fit:cover}
+.pkg .in{padding:54px 52px}
+.pkg .h{font-size:clamp(26px,3vw,38px);margin:10px 0 6px}
+.pkg .hrs{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--p2)}
+.pkg ul{list-style:none;padding:0;margin:22px 0;font-size:14px}
+.pkg li{padding:7px 0 7px 26px;position:relative;border-bottom:1px solid rgba(58,69,53,.1)}
+.pkg li:before{content:"";position:absolute;left:0;top:18px;width:14px;height:1px;background:var(--p2)}
+.pkg .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.pkg .big{font-family:'Rubik',sans-serif;font-weight:300;font-size:52px;line-height:1;color:var(--g)}
+.pkg .big small{font-family:'Montserrat';font-size:11px;letter-spacing:.3em;display:block;color:var(--mute)}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.pkg.on{grid-template-columns:1fr}.pkg img{min-height:300px;max-height:380px}.pkg .in{padding:34px 26px}}
+.addons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(58,69,53,.15);margin-top:30px}
+.addons div{background:var(--c);padding:24px 20px;text-align:center}
+.addons b{display:block;font-family:'Rubik',sans-serif;font-weight:300;font-size:24px;color:var(--p2)}
+.addons span{font-size:12px;letter-spacing:.08em}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.addons{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.small{font-size:13px;color:var(--mute);text-align:center;margin-top:22px}
+/* portfolio */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.gallery:not(.open) img:nth-child(n+10){display:none}
+.gmore{display:block;margin:34px auto 0;background:none;color:inherit;font-family:inherit;cursor:pointer}
+@media(max-width:700px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;cursor:zoom-in;transition:opacity .2s}
+.gallery img:hover{opacity:.88}
+.lb{position:fixed;inset:0;background:rgba(36,44,33,.95);display:none;align-items:center;justify-content:center;z-index:50;padding:30px}
+.lb.on{display:flex}
+.lb img{max-height:90vh;max-width:100%}
+.lb button{position:absolute;top:18px;right:22px;background:none;border:0;color:var(--c);font-size:34px;cursor:pointer;width:48px;height:48px}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.steps div{border-top:1px solid var(--p);padding-top:20px}
+.steps b{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:400;color:var(--p);line-height:1}
+.steps h4{margin:12px 0 8px;font-weight:400;font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+.steps p{margin:0;font-size:14px;opacity:.85}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+/* voucher */
+.voucher{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.vprice{font-weight:500;margin-top:10px}
+.vpics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.vpics img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.vcard{background:var(--g);color:var(--c);aspect-ratio:3/2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:30px}
+.vcard .eyebrow{opacity:.8}
+.vcard .gift{font-size:clamp(46px,6vw,74px);font-weight:300;letter-spacing:.1em;line-height:1}
+.vcard .script{font-size:clamp(46px,6vw,70px);color:var(--p);margin-top:-.35em}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.voucher{grid-template-columns:1fr;gap:36px}}
+/* terms */
+.terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
+.terms div{border-top:1px solid var(--p2);padding-top:18px}
+.terms h4{margin:0 0 8px;font-weight:400;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--g)}
+.terms p{margin:0;font-size:14px}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.terms{grid-template-columns:1fr}}
+/* menu */
+.burger{background:none;border:0;cursor:pointer;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:10px}
+.burger span{display:block;height:1px;background:var(--c)}
+.menu{position:fixed;inset:0;background:var(--g);color:var(--c);z-index:40;display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.menu.on{display:flex}
+.menu a{text-decoration:none;font-size:22px;font-weight:300;letter-spacing:.25em;text-transform:uppercase}
+.menu a:hover{color:var(--p)}
+.menu .x{position:absolute;top:18px;right:22px;background:none;border:0;color:var(--c);font-size:36px;cursor:pointer;width:48px;height:48px}
+/* contact */
+.contact{text-align:center}
+.contact .h{font-size:clamp(34px,5vw,62px)}
+.contact .script{display:block;color:var(--p);font-size:clamp(44px,6vw,78px);margin-top:-.2em}
+.cbtns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:40px 0 26px}
+.contact small{display:block;font-size:13px;opacity:.8;letter-spacing:.08em}
+footer{background:var(--g2);color:var(--c);padding:28px 0;font-size:11px;letter-spacing:.25em;text-transform:uppercase}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;opacity:.8}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap navin">
+    <a class="logo" href="#top" aria-label="Anna Finyk"><b>PHOTOGRAPHER</b><span>Anna Finyk</span></a>
+    <div class="links">
+      <a href="#about" data-i="nAbout">About</a>
+      <a href="#services" data-i="nServices">Services</a>
+      <a href="#content" data-i="nContent">Events</a>
+      <a href="#weddings" data-i="nWeddings">Weddings</a>
+      <a href="#portfolio" data-i="nPortfolio">Portfolio</a>
+      <a href="#contact" data-i="nContact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-l="en" class="on">EN</button>
+        <button type="button" data-l="uk">UA</button>
+      </div>
+      <button type="button" class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="menu" id="menu" role="dialog" aria-label="Menu">
+  <button type="button" class="x" id="menux" aria-label="Close">×</button>
+  <a href="#about" data-i="nAbout">About</a>
+  <a href="#services" data-i="nPricing">Pricing</a>
+  <a href="#weddings" data-i="nWeddings">Weddings</a>
+  <a href="#content" data-i="nContent">Events</a>
+  <a href="#portfolio" data-i="nPortfolio">Portfolio</a>
+  <a href="#vouchers" data-i="nVouchers">Gift vouchers</a>
+  <a href="#terms" data-i="nTerms">Terms</a>
+  <a href="#contact" data-i="nContact">Contact</a>
+</div>
+
+<header class="hero" id="top">
+  <img src="img/hero2.jpg" alt="Wedding film stills: rings, vows by the window, hands held">
+  <svg class="lines" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true"><path d="M1500 40 C 1150 180, 1380 520, 1120 640 S 1260 860, 1500 980" fill="none" stroke="#E8C4C0" stroke-width="1.4" opacity=".7"/><path d="M1460 -40 C 1240 200, 1400 380, 1220 520" fill="none" stroke="#E8C4C0" stroke-width="1" opacity=".5"/></svg>
+  <div class="wrap">
+    <div class="eyebrow" data-i="heroEyebrow">Weddings · Love stories · Families</div>
+    <h1 class="h"><span data-i="heroH">Your story,</span><span class="script" data-i="heroScript">beautifully told</span></h1>
+    <p data-i="heroP">Natural, emotional photography across the Cotswolds, Hereford, Bristol, London and the rest of the UK and Europe.</p>
+    <a class="btn solid" href="#contact" data-i="ctaDate" style="font-weight:600">Check your date</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <img src="img/anna.jpg" alt="Anna Finyk, photographer" style="object-position:center 30%">
+    <div>
+      <div class="eyebrow" style="color:var(--p2)" data-i="aboutEyebrow">Nice to meet you</div>
+      <h2 class="h" data-i="aboutH">Hi, I’m Anna</h2>
+      <p data-i="aboutP1">I’m a Ukrainian photographer and content creator based in Hereford. I fell in love with photography the day I bought my first camera, and within a year I was already capturing weddings.</p>
+      <p data-i="aboutP2">I’m also a TV host of a travel show, so I know how to make people feel relaxed in front of the camera. I’ll guide you through every pose, help with outfits and locations, and catch the real emotions in between.</p>
+      <p data-i="aboutP3">I photograph weddings, love stories, families, maternity, christenings and individual portraits. I also create photo content for retreats, business camps, events and brands.</p>
+      <div class="stats">
+        <div><b>2.5</b><span data-i="stYears">years</span></div>
+        <div><b>25+</b><span data-i="stWeddings">weddings</span></div>
+        <div><b>1–2</b><span data-i="stWeeks">weeks delivery</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="dark" id="services">
+  <div class="wrap">
+    <div class="title"><div class="eyebrow" data-i="svcEyebrow">What I offer</div><h2 class="h" data-i="svcH">Photoshoots</h2><div class="rule"></div></div>
+    <div class="svc">
+      <article class="card">
+        <div class="slides"><img src="img/ls1.jpg" alt="Love story photoshoot" class="on"><img src="img/ls2.jpg" alt="Love story photoshoot"><img src="img/ls3.jpg" alt="Love story photoshoot"><img src="img/ls4.jpg" alt="Love story photoshoot"><img src="img/ls5.jpg" alt="Love story photoshoot"><img src="img/ls6.jpg" alt="Love story photoshoot"><img src="img/fm1.jpg" alt="Maternity love story with alpacas"><img src="img/fm2.jpg" alt="Maternity love story with alpacas"><img src="img/ls8.jpg" alt="Love story on the cliffs"><img src="img/ls9.jpg" alt="Couple laughing on the cliffs"><img src="img/ls10.jpg" alt="Love story at golden hour"><img src="img/ls11.jpg" alt="Couple lying in a golden field"><img src="img/ls12.jpg" alt="Couple dancing in the Cotswolds"><img src="img/ls13.jpg" alt="Holding hands close-up"><img src="img/ls14.jpg" alt="Maternity shoot by the window"><img src="img/ls15.jpg" alt="Couple in golden light"></div>
+        <div class="in">
+          <h3 data-i="loveT">Love story · Maternity</h3>
+          <div class="price">£200</div>
+          <ul>
+            <li data-i="love1">1 hour of shooting</li>
+            <li data-i="love2">70–100 edited photos, 35+ retouched</li>
+            <li data-i="love3">Posing guidance + examples</li>
+            <li data-i="love4">Help with outfits and location</li>
+            <li data-i="love5">Private online gallery</li>
+            <li data-i="love6">Proposal shoot: £230</li>
+          </ul>
+          <div class="note" data-i="travelIn">Travel expenses not included</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="slides"><img src="img/pt1.jpg" alt="Portrait photoshoot" class="on"><img src="img/pt16.jpg" alt="Studio portrait in a black suit"><img src="img/pt2.jpg" alt="Portrait photoshoot"><img src="img/pt4.jpg" alt="Portrait photoshoot"><img src="img/pt5.jpg" alt="Portrait photoshoot"><img src="img/pt6.jpg" alt="Portrait photoshoot in London"><img src="img/pt7.jpg" alt="Portrait photoshoot in London"><img src="img/pt8.jpg" alt="Portrait photoshoot in London"><img src="img/pt9.jpg" alt="Black and white portrait in a car"><img src="img/pt11.jpg" alt="Portrait by a countryside fence"><img src="img/pt12.jpg" alt="Portrait with horses"><img src="img/pt14.jpg" alt="Portrait by the window"><img src="img/pt15.jpg" alt="Studio portrait details"></div>
+        <div class="in">
+          <h3 data-i="ptT">Portrait</h3>
+          <div class="price">£180</div>
+          <ul>
+            <li data-i="love1">1 hour of shooting</li>
+            <li data-i="pt2">40–60 edited photos, 25+ retouched</li>
+            <li data-i="pt3">Solo, personal brand and travel portraits</li>
+            <li data-i="love3">Posing guidance + examples</li>
+            <li data-i="love4">Help with outfits and location</li>
+            <li data-i="love5">Private online gallery</li>
+          </ul>
+          <div class="note" data-i="travelIn">Travel expenses not included</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="slides"><img src="img/fa1.jpg" alt="Family photoshoot" class="on"><img src="img/fa2.jpg" alt="Family photoshoot"><img src="img/fa3.jpg" alt="Family photoshoot"><img src="img/fa4.jpg" alt="Family photoshoot"><img src="img/fa5.jpg" alt="Family photoshoot"><img src="img/fa6.jpg" alt="Family photoshoot"><img src="img/fa7.jpg" alt="Family photoshoot"><img src="img/fa8.jpg" alt="Family photoshoot"><img src="img/fa9.jpg" alt="Family photoshoot"><img src="img/fa10.jpg" alt="Family birthday photoshoot"><img src="img/fa11.jpg" alt="Family walk in the park"><img src="img/fa13.jpg" alt="Family hands together"><img src="img/fa15.jpg" alt="Family blowing bubbles"></div>
+        <div class="in">
+          <h3 data-i="famT">Family</h3>
+          <div class="price" data-i="famP">from £200</div>
+          <ul>
+            <li data-i="fam1">1 hour of shooting</li>
+            <li data-i="fam2">50–70 edited photos, 35+ retouched</li>
+            <li data-i="fam3">Families, kids and generations</li>
+            <li data-i="fam4">Help with outfits and location</li>
+            <li data-i="fam5">Private online gallery</li>
+          </ul>
+          <div class="note" data-i="travelIn">Travel expenses not included</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="mini"><img src="img/p1.jpg" alt="Wedding photo" loading="lazy"><img src="img/p5.jpg" alt="Wedding photo" loading="lazy"><img src="img/p2.jpg" alt="Wedding photo" loading="lazy"><img src="img/p18.jpg" alt="Wedding photo" loading="lazy"><img src="img/p17.jpg" alt="Wedding photo" loading="lazy"><img src="img/p12.jpg" alt="Wedding photo" loading="lazy"><img src="img/p13.jpg" alt="Wedding photo" loading="lazy"><img src="img/p19.jpg" alt="Wedding photo" loading="lazy"><img src="img/p20.jpg" alt="Wedding photo" loading="lazy"><img src="img/p21.jpg" alt="Wedding photo" loading="lazy"><img src="img/p23.jpg" alt="Wedding photo" loading="lazy"><img src="img/p11.jpg" alt="Wedding photo" loading="lazy"></div>
+        <div class="in">
+          <h3 data-i="wedCardT">Weddings</h3>
+          <div class="price" data-i="wedCardP">from £400</div>
+          <ul>
+            <li data-i="wc1">From 2 hours to the whole day</li>
+            <li data-i="wc2">Sneak peek within 48 hours</li>
+            <li data-i="wc3">Gallery in 1–2 weeks</li>
+            <li data-i="wc4">Album as a gift in 8 and 10 hour packages</li>
+          </ul>
+          <a class="btn" href="#weddings" style="margin-top:auto;align-self:flex-start;color:var(--g)" data-i="wcBtn">See packages</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="weddings">
+  <div class="wrap">
+    <div class="title"><div class="eyebrow" data-i="wedEyebrow">Wedding collection 2026 / 2027</div><h2 class="h" data-i="wedH">Wedding packages</h2><div class="rule"></div></div>
+    <div class="tabs" role="tablist">
+      <button type="button" class="on" data-p="0">I · 2h</button>
+      <button type="button" data-p="1">II · 5h</button>
+      <button type="button" data-p="2">III · 8h</button>
+      <button type="button" data-p="3">IV · 10h</button>
+    </div>
+
+    <div class="pkg on">
+      <img src="img/cer.jpg" alt="Wedding vows by the bay window" style="object-position:55% center">
+      <div class="in">
+        <div class="eyebrow" style="color:var(--p2)">Wedding package I</div>
+        <h3 class="h">Ceremony + Love Story</h3>
+        <div class="hrs" data-i="upTo2">Up to 2 hours</div>
+        <ul>
+          <li data-i="w1a">Wedding ceremony</li>
+          <li data-i="w1b">Confetti and group photos with family and guests</li>
+          <li data-i="w1c">Couple’s love story portraits</li>
+          <li data-i="w1d">120–150 edited images, including retouched highlights</li>
+          <li data-i="peek">Sneak peek within 48 hours</li>
+          <li data-i="gallery">Private online gallery</li>
+          <li data-i="prints">A set of fine art prints</li>
+        </ul>
+        <div class="foot"><div class="big"><small data-i="from">FROM</small>£400</div><a class="btn" href="#contact" data-i="book">Book</a></div>
+      </div>
+    </div>
+
+    <div class="pkg">
+      <img src="img/p23.jpg" alt="Kiss under the veil in the park">
+      <div class="in">
+        <div class="eyebrow" style="color:var(--p2)">Wedding package II</div>
+        <h3 class="h">Wedding Day</h3>
+        <div class="hrs" data-i="upTo5">Up to 5 hours</div>
+        <ul>
+          <li data-i="w1a">Wedding ceremony</li>
+          <li data-i="w2b">Drinks reception, confetti and group photos</li>
+          <li data-i="w2c">Full couple portrait session with a change of location</li>
+          <li data-i="w2d">250–350 edited images, including retouched highlights</li>
+          <li data-i="peek">Sneak peek within 48 hours</li>
+          <li data-i="consult">Planning consultation before the wedding</li>
+          <li data-i="prints">A set of fine art prints</li>
+        </ul>
+        <div class="foot"><div class="big"><small data-i="from">FROM</small>£750</div><a class="btn" href="#contact" data-i="book">Book</a></div>
+      </div>
+    </div>
+
+    <div class="pkg">
+      <div class="slides pslides"><img src="img/fd1.jpg" alt="Full wedding day" class="on"><img src="img/fd2.jpg" alt="Full wedding day"><img src="img/fd3.jpg" alt="Full wedding day"></div>
+      <div class="in">
+        <div class="eyebrow" style="color:var(--p2)">Wedding package III</div>
+        <h3 class="h">Full Wedding Day</h3>
+        <div class="hrs" data-i="upTo8">Up to 8 hours</div>
+        <ul>
+          <li data-i="w3a">Morning preparations of the bride and groom</li>
+          <li data-i="w3b">Ceremony, drinks reception and group photos</li>
+          <li data-i="w3c">Wedding breakfast, speeches and first dance</li>
+          <li data-i="w3d">Approx. 600 edited images, including retouched highlights</li>
+          <li data-i="peek">Sneak peek within 48 hours</li>
+          <li data-i="consult">Planning consultation before the wedding</li>
+          <li data-i="album">A wedding album as a gift</li>
+        </ul>
+        <div class="foot"><div class="big"><small data-i="from">FROM</small>£1400</div><a class="btn" href="#contact" data-i="book">Book</a></div>
+      </div>
+    </div>
+
+    <div class="pkg">
+      <img src="img/p10.jpg" alt="Bride getting ready">
+      <div class="in">
+        <div class="eyebrow" style="color:var(--p2)">Wedding package IV</div>
+        <h3 class="h">The Complete Story</h3>
+        <div class="hrs" data-i="upTo10">Up to 10 hours</div>
+        <ul>
+          <li data-i="w4a">Everything in the Full Wedding Day package</li>
+          <li data-i="w4b">Complimentary pre-wedding shoot</li>
+          <li data-i="w4c">Evening celebration and party</li>
+          <li data-i="w4d">Approx. 750 edited images, including retouched highlights</li>
+          <li data-i="peek">Sneak peek within 48 hours</li>
+          <li data-i="album">A wedding album as a gift</li>
+        </ul>
+        <div class="foot"><div class="big"><small data-i="from">FROM</small>£2000</div><a class="btn" href="#contact" data-i="book">Book</a></div>
+      </div>
+    </div>
+
+    <div class="addons">
+      <div><b>£150</b><span data-i="ad1">Extra hour</span></div>
+      <div><b data-i="ad2p">from £150</b><span data-i="ad2">Wedding album</span></div>
+      <div><b>£150–300</b><span data-i="ad3">Reels / short videos</span></div>
+      <div><b data-i="ad4p">from £300</b><span data-i="ad4">Second photographer</span></div>
+    </div>
+    <p class="small" data-i="wedNote">Gallery delivered within 1–2 weeks · 30% booking fee secures your date · Travel charged separately</p>
+  </div>
+</section>
+
+<section id="content">
+  <div class="wrap about" style="grid-template-columns:1.1fr 1fr">
+    <div>
+      <div class="eyebrow" style="color:var(--p2)" data-i="ctEyebrow">Content creator & event photographer</div>
+      <h2 class="h" style="font-size:clamp(28px,3.5vw,44px);margin:14px 0 24px" data-i="ctH">Retreats, events & brands</h2>
+      <p data-i="ctP1">Besides weddings and portraits, I create photo content for retreats, business camps, hotels and brands, from the UK to Bali and Thailand.</p>
+      <ul class="ctlist">
+        <li data-i="ct1">Retreats and wellness weekends</li>
+        <li data-i="ct2">Business camps, conferences and events</li>
+        <li data-i="ct3">Hotels, villas and travel content</li>
+        <li data-i="ct4">Brand content and Reels</li>
+      </ul>
+      <p data-i="ctP2">Every project is different, so the price is tailored to your plans. Send me a message on Instagram and tell me about your event.</p>
+      <a class="btn" href="https://instagram.com/annafinyk.ph" style="margin-top:10px" data-i="ctBtn">Message me on Instagram</a>
+    </div>
+    <div class="ctgrid" id="ctgrid"><div class="slides"><img src="img/rt21.jpg" alt="Retreat group jumping in Bali" class="on"><img src="img/rt22.jpg" alt="Retreat group at a waterfall"><img src="img/rt23.jpg" alt="Retreat group at a waterfall viewpoint"><img src="img/rt1.jpg" alt="Retreat portrait on a palm tree"></div><div class="slides"><img src="img/rt20.jpg" alt="Hotel suite" class="on"><img src="img/rt11.jpg" alt="Hotel room content"><img src="img/rt12.jpg" alt="Hotel lounge content"><img src="img/rt17.jpg" alt="Hotel bathroom details"><img src="img/rt10.jpg" alt="Retreat villa terrace"></div><div class="slides"><img src="img/rt19.jpg" alt="Floating breakfast" class="on"><img src="img/rt14.jpg" alt="Coconut drink at a hotel bistro"><img src="img/rt15.jpg" alt="Hotel breakfast by the pool"><img src="img/rt13.jpg" alt="Hotel restaurant content"><img src="img/rt9.jpg" alt="Retreat welcome drinks"></div><div class="slides"><img src="img/rt18.jpg" alt="Jungle terrace in Bali" class="on"><img src="img/rt16.jpg" alt="Hotel pool in Bali"><img src="img/rt2.jpg" alt="Retreat on the beach"><img src="img/rt3.jpg" alt="Beach portrait under palms"><img src="img/rt4.jpg" alt="Portrait by a palm tree"><img src="img/rt5.jpg" alt="Relaxing under a palm"><img src="img/rt6.jpg" alt="Villa garden portrait"><img src="img/rt7.jpg" alt="Poolside portrait"><img src="img/rt8.jpg" alt="Infinity pool portrait"></div></div>
+  </div>
+</section>
+
+<section id="portfolio" style="padding-top:0">
+  <div class="wrap">
+    <div class="title"><div class="eyebrow" data-i="pfEyebrow">Portfolio</div><h2 class="h" data-i="pfH">Wedding moments I’ve captured</h2><div class="rule"></div></div>
+    <div class="gallery" id="gal">
+      <img src="img/p1.jpg" alt="Bride twirling in front of a red-brick building" loading="lazy">
+      <img src="img/p19.jpg" alt="Bride under a stone pavilion at sunset" loading="lazy">
+      <img src="img/p20.jpg" alt="Couple kissing by an ivy wall" loading="lazy">
+      <img src="img/p21.jpg" alt="Kiss on a tree-lined garden path" loading="lazy">
+      <img src="img/p18.jpg" alt="Couple in a conservatory" loading="lazy">
+      <img src="img/p24.jpg" alt="Wedding ring detail" loading="lazy">
+      <img src="img/p22.jpg" alt="Guests taking a selfie at the ceremony" loading="lazy">
+      <img src="img/nw1.jpg" alt="Couple nose to nose in golden light" loading="lazy">
+      <img src="img/p17.jpg" alt="Bride in a robe by the window" loading="lazy">
+      <img src="img/p2.jpg" alt="Groom dipping the bride for a kiss" loading="lazy">
+      <img src="img/p9.jpg" alt="Wedding film stills in Oxford" loading="lazy">
+      <img src="img/p23.jpg" alt="Kiss under the veil" loading="lazy">
+      <img src="img/p14.jpg" alt="Bridal shoes and bouquet" loading="lazy">
+      <img src="img/p12.jpg" alt="Romantic dip in front of an ivy-covered building" loading="lazy">
+      <img src="img/p16.jpg" alt="Wedding welcome mirror with flowers" loading="lazy">
+      <img src="img/nw2.jpg" alt="Groom kissing the bride's hand" loading="lazy">
+      <img src="img/p15.jpg" alt="Wedding venue with wisteria" loading="lazy">
+      <img src="img/wo1.jpg" alt="Couple on stone steps in Oxford" loading="lazy">
+      <img src="img/p11.jpg" alt="Couple with their dog" loading="lazy">
+      <img src="img/p10.jpg" alt="Getting ready" loading="lazy">
+      <img src="img/fd2.jpg" alt="Toast with the bride and groom" loading="lazy">
+      <img src="img/fd4.jpg" alt="Happy groom" loading="lazy">
+      <img src="img/p25.jpg" alt="Ring exchange close-up" loading="lazy">
+      <img src="img/p13.jpg" alt="Couple twirling in a courtyard" loading="lazy">
+    </div>
+    <button class="btn gmore" id="gmore" type="button" data-i="galMore" onclick="document.getElementById('gal').classList.add('open');this.style.display='none'">Show more +</button>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="title"><div class="eyebrow" data-i="stEyebrow">How it works</div><h2 class="h" data-i="stH">From hello to gallery</h2><div class="rule"></div></div>
+    <div class="steps">
+      <div><b>01</b><h4 data-i="s1t">Message me</h4><p data-i="s1p">Tell me your date, location and what you dream of.</p></div>
+      <div><b>02</b><h4 data-i="s2t">Plan together</h4><p data-i="s2p">We pick the package, outfits, locations and timing.</p></div>
+      <div><b>03</b><h4 data-i="s3t">Your shoot</h4><p data-i="s3p">Relax and enjoy. I guide you so it feels natural.</p></div>
+      <div><b>04</b><h4 data-i="s4t">Your gallery</h4><p data-i="s4p">A sneak peek in 48 hours, full gallery in 1–2 weeks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="vouchers">
+  <div class="wrap voucher">
+    <div class="vpics"><img src="img/vc1.jpg" alt="Gift voucher for a photoshoot by Anna Finyk" loading="lazy"><img src="img/vc2.jpg" alt="Gift voucher in a box with a gift bag" loading="lazy"></div>
+    <div>
+      <div class="eyebrow" style="color:var(--p2)" data-i="vEyebrow">The perfect present</div>
+      <h2 class="h" style="font-size:clamp(28px,3.5vw,42px);margin:14px 0 20px" data-i="vH">Gift vouchers</h2>
+      <p data-i="vP">A gift that won’t end up in a cupboard: a photoshoot for someone you love. Vouchers are valid for 3 months from the date of purchase.</p>
+      <p class="vprice" data-i="vPrice">Voucher price: the cost of the chosen photoshoot + £10. Delivery is free.</p>
+      <a class="btn" href="#contact" style="margin-top:14px" data-i="vBtn">Order a voucher</a>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="wrap">
+    <div class="title"><div class="eyebrow" data-i="tEyebrow">Good to know</div><h2 class="h" data-i="tH">Booking & terms</h2><div class="rule"></div></div>
+    <div class="terms">
+      <div><h4 data-i="t1t">Booking</h4><p data-i="t1p">A booking fee secures your date: £50 for photoshoots, 30% for weddings. It is non-refundable.</p></div>
+      <div><h4 data-i="t2t">Rescheduling</h4><p data-i="t2p">You can move your date once if you tell me at least 7 days before. Your booking fee moves with it.</p></div>
+      <div><h4 data-i="t3t">Payment</h4><p data-i="t3p">The balance for photoshoots is paid on the day. For weddings, after the wedding. Bank transfer, invoice on request.</p></div>
+      <div><h4 data-i="t4t">Delivery</h4><p data-i="t4p">Full gallery in 1–2 weeks, in a private online gallery.</p></div>
+      <div><h4 data-i="t6t">Travel</h4><p data-i="t6p">Travel expenses aren’t included in the price and are paid separately for all photoshoots and weddings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--p)" data-i="cEyebrow">Let’s create something beautiful</div>
+    <h2 class="h" style="margin-top:16px"><span data-i="cH">Check your date</span><span class="script" data-i="cScript">and say hello</span></h2>
+    <div class="cbtns">
+      <a class="btn solid" href="https://instagram.com/annafinyk.ph">Instagram @annafinyk.ph</a>
+      <a class="btn" href="https://wa.me/447707986758">WhatsApp</a>
+    </div>
+    <small>WhatsApp: +44 7707 986758</small>
+    <small style="margin-top:8px" data-i="cArea">Hereford · Cotswolds · Bristol · London · UK & Europe</small>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Anna Finyk Photography</span><span>@annafinyk.ph</span></div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Photo"><button type="button" aria-label="Close" id="lbx">×</button><img id="lbi" alt=""></div>
+
+<script>
+const T={uk:{nAbout:"Про мене",nServices:"Послуги",nWeddings:"Весілля",nPortfolio:"Портфоліо",nContact:"Контакти",nPricing:"Ціни",nVouchers:"Сертифікати",nTerms:"Умови",tEyebrow:"Корисно знати",tH:"Бронювання та умови",t1t:"Бронювання",t1p:"Передоплата закріплює дату: £50 за фотосесію, 30% за весілля. Вона не повертається.",t2t:"Перенесення",t2p:"Дату можна перенести один раз, якщо попередити щонайменше за 7 днів. Передоплата переходить на нову дату.",t3t:"Оплата",t3p:"Залишок за фотосесію сплачується в день зйомки, за весілля — після весілля. Банківський переказ, інвойс за запитом.",t4t:"Терміни",t4p:"Уся галерея за 1–2 тижні в персональній онлайн-галереї.",t5t:"Необроблені фото",t5p:"Необроблені файли не входять у вартість, але додаткові фото можна докупити по £1.50 за штуку.",t6t:"Дорога",t6p:"Дорога не входить у вартість і оплачується окремо для всіх фотосесій і весіль.",nContent:"Події",ctEyebrow:"Контент-мейкерка та фотограф подій",ctH:"Ретрити, події та бренди",ctP1:"Окрім весіль і портретів, я створюю фотоконтент для ретритів, бізнес-кемпів, готелів і брендів: від Британії до Балі й Таїланду.",ct1:"Ретрити та велнес-вихідні",ct2:"Бізнес-кемпи, конференції та події",ct3:"Готелі, вілли та тревел-контент",ct4:"Контент для брендів і рілси",ctP2:"Кожен проєкт особливий, тож вартість розраховую індивідуально. Напишіть мені в Instagram і розкажіть про вашу подію.",ctBtn:"Написати в Instagram",
+heroEyebrow:"Весілля · Love story · Сім'ї",heroH:"Ваша історія,",heroScript:"красиво розказана",heroP:"Природні, емоційні фото в Cotswold, Херефорді, Бристолі, Лондоні та по всій Великій Британії й Європі.",ctaDate:"Перевірити дату",
+aboutEyebrow:"Приємно познайомитись",aboutH:"Привіт, я Анна",aboutP1:"Я українська фотографка й контент-мейкерка з Херефорда. Я закохалася у фотографію в день, коли купила свою першу камеру, і вже за рік знімала весілля.",aboutP3:"Я знімаю весілля, love story, сімейні фотосесії, вагітність, хрестини та індивідуальні портрети. Також створюю фотоконтент для ретритів, бізнес-кемпів, подій і брендів.",aboutP2:"Також я ведуча тревел-програми на телебаченні, тож знаю, як допомогти людям розслабитися перед камерою. Я підкажу кожну позу, допоможу з образами й локаціями та зловлю справжні емоції між кадрами.",stYears:"роки досвіду",stWeddings:"весіль",stWeeks:"тижні до готових фото",
+svcEyebrow:"Що я пропоную",svcH:"Фотосесії",loveT:"Love story · Вагітність",ptT:"Портретна",pt2:"40–60 фото в обробці, 25+ у ретуші",pt3:"Особисті, бренд- і тревел-портрети",love6:"Зйомка пропозиції: £230",love1:"1 година зйомки",love2:"70–100 фото в обробці, 35+ у ретуші",love3:"Допомога з позуванням + приклади",love4:"Допомога з образами й локацією",love5:"Персональна онлайн-галерея",travelIn:"Дорога оплачується окремо",
+famT:"Сімейна",fam1:"1 година зйомки",famP:"від £200",fam2:"50–70 фото в обробці, 35+ у ретуші",fam3:"Сім'ї, діти й кілька поколінь",fam4:"Допомога з образами й локацією",fam5:"Персональна онлайн-галерея",
+wedCardT:"Весілля",wedCardP:"від £400",wc1:"Від 2 годин до цілого дня",wc2:"Перші фото за 48 годин",wc3:"Галерея за 1–2 тижні",wc4:"Альбом у подарунок у пакетах на 8 і 10 годин",wcBtn:"Дивитись пакети",cotsT:"Фото-дні в Cotswold",cotsP:"від £120",cots1:"Маленькі групи по 3–4 людини",cots2:"Фотосесія біля красивого готелю",cots3:"Поїздка селами Cotswold",cots4:"Ідеально для гостей Британії",cotsN:"Дати анонсую в Instagram",
+wedEyebrow:"Весільна колекція 2026 / 2027",wedH:"Весільні пакети",upTo2:"До 2 годин",upTo5:"До 5 годин",upTo8:"До 8 годин",upTo10:"До 10 годин",
+w1a:"Весільна церемонія",w1b:"Конфетті та групові фото з рідними й гостями",w1c:"Love story пари",w1d:"120–150 фото в обробці, включно з ретушшю",peek:"Перші фото протягом 48 годин",gallery:"Персональна онлайн-галерея",prints:"Набір художніх принтів",from:"ВІД",book:"Забронювати",
+w2b:"Фуршет, конфетті та групові фото",w2c:"Повна фотосесія пари зі зміною локації",w2d:"250–350 фото в обробці, включно з ретушшю",consult:"Консультація перед весіллям",
+w3a:"Ранкові збори нареченої та нареченого",w3b:"Церемонія, фуршет і групові фото",w3c:"Банкет, промови та перший танець",w3d:"Близько 600 фото в обробці, включно з ретушшю",album:"Весільний альбом у подарунок",
+w4a:"Усе з пакета Full Wedding Day",w4b:"Фотосесія до весілля в подарунок",w4c:"Вечірнє святкування та вечірка",w4d:"Близько 750 фото в обробці, включно з ретушшю",
+ad1:"Додаткова година",ad2p:"від £150",ad2:"Весільний альбом",ad3:"Рілси / короткі відео",ad4p:"від £300",ad4:"Другий фотограф",wedNote:"Галерея за 1–2 тижні · Передоплата 30% закріплює дату · Дорога оплачується окремо",
+pfEyebrow:"Портфоліо",pfH:"Весільні моменти, які я зберегла",galMore:"Показати більше +",stEyebrow:"Як це працює",stH:"Від привіту до галереї",
+s1t:"Напишіть мені",s1p:"Розкажіть про дату, локацію та свої мрії.",s2t:"Плануємо разом",s2p:"Обираємо пакет, образи, локації й таймінг.",s3t:"Ваша зйомка",s3p:"Розслабтеся й насолоджуйтесь. Я підкажу все, щоб було природно.",s4t:"Ваша галерея",s4p:"Перші фото за 48 годин, уся галерея за 1–2 тижні.",
+vEyebrow:"Ідеальний подарунок",vH:"Подарункові сертифікати",vP:"Подарунок, який не опиниться в шафі: фотосесія для когось особливого. Сертифікат дійсний 3 місяці з дати покупки.",vPrice:"Вартість сертифіката: ціна обраної фотосесії + £10. Доставка в подарунок.",vBtn:"Замовити сертифікат",
+cEyebrow:"Створімо щось красиве",cH:"Перевірте дату",cScript:"і напишіть мені",cArea:"Херефорд · Cotswold · Бристоль · Лондон · Британія та Європа"}};
+const EN={};document.querySelectorAll('[data-i]').forEach(e=>EN[e.dataset.i]=EN[e.dataset.i]||e.textContent);
+function setLang(l){document.documentElement.lang=l==='uk'?'uk':'en';document.querySelectorAll('[data-i]').forEach(e=>{const k=e.dataset.i;e.textContent=l==='uk'&&T.uk[k]?T.uk[k]:EN[k]});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));try{localStorage.setItem('af-lang',l)}catch(e){}}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+try{const s=localStorage.getItem('af-lang');if(s)setLang(s)}catch(e){}
+const pk=document.querySelectorAll('.pkg');document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));pk.forEach((p,i)=>p.classList.toggle('on',i==b.dataset.p))}));
+document.querySelectorAll('.slides').forEach(sl=>{const im=sl.querySelectorAll('img');if(im.length<2)return;let i=0;setInterval(()=>{im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3000)});
+const menu=document.getElementById('menu');document.getElementById('burger').addEventListener('click',()=>menu.classList.add('on'));document.getElementById('menux').addEventListener('click',()=>menu.classList.remove('on'));menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('on')));
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const lb=document.getElementById('lb'),lbi=document.getElementById('lbi');document.querySelectorAll('#gal img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('on')}));
+lb.addEventListener('click',e=>{if(e.target!==lbi)lb.classList.remove('on')});
+</script>
+</body>
+</html>
