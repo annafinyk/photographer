@@ -108,6 +108,7 @@ section{padding:110px 0}
 .pkg li:before{content:"";position:absolute;left:0;top:18px;width:14px;height:1px;background:var(--p2)}
 .pkg .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .pkg .big{font-family:'Rubik',sans-serif;font-weight:300;font-size:52px;line-height:1;color:var(--g)}
+
 .wcustom{margin:34px auto 0;max-width:760px;text-align:center;padding:30px 28px;border:1px solid rgba(58,69,53,.18)}
 .wcustom h4{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:26px;color:var(--p2)}
 .wcustom p{margin:0;font-size:15px;line-height:1.7}
@@ -288,7 +289,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         </div>
       </article>
       <article class="card">
-        <div class="mini"><img src="img/p1.jpg" alt="Wedding photo" loading="lazy"><img src="img/p5.jpg" alt="Wedding photo" loading="lazy"><img src="img/p2.jpg" alt="Wedding photo" loading="lazy"><img src="img/p18.jpg" alt="Wedding photo" loading="lazy"><img src="img/p17.jpg" alt="Wedding photo" loading="lazy"><img src="img/p12.jpg" alt="Wedding photo" loading="lazy"><img src="img/p13.jpg" alt="Wedding photo" loading="lazy"><img src="img/p19.jpg" alt="Wedding photo" loading="lazy"><img src="img/p20.jpg" alt="Wedding photo" loading="lazy"><img src="img/p21.jpg" alt="Wedding photo" loading="lazy"><img src="img/p23.jpg" alt="Wedding photo" loading="lazy"><img src="img/p11.jpg" alt="Wedding photo" loading="lazy"></div>
+        <div class="slides"><img src="img/p1.jpg" alt="Wedding photo" class="on"><img src="img/p5.jpg" alt="Wedding photo"><img src="img/p2.jpg" alt="Wedding photo"><img src="img/p18.jpg" alt="Wedding photo"><img src="img/p17.jpg" alt="Wedding photo"><img src="img/p12.jpg" alt="Wedding photo"><img src="img/p13.jpg" alt="Wedding photo"><img src="img/p19.jpg" alt="Wedding photo"><img src="img/p20.jpg" alt="Wedding photo"><img src="img/p21.jpg" alt="Wedding photo"><img src="img/p23.jpg" alt="Wedding photo"><img src="img/p11.jpg" alt="Wedding photo"></div>
         <div class="in">
           <h3 data-i="wedCardT">Weddings</h3>
           <div class="price" data-i="wedCardP">from £400</div>
@@ -296,7 +297,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
             <li data-i="wc1">From 2 hours to the whole day</li>
             <li data-i="wc2">Sneak peek within 48 hours</li>
             <li data-i="wc3">Gallery in 1–2 weeks</li>
-            <li data-i="wc4">Album as a gift in 8 and 10 hour packages</li>
+            <li data-i="wc4">Album as a gift in the 8 hour package</li>
           </ul>
           <a class="btn" href="#weddings" style="margin-top:auto;align-self:flex-start;color:var(--g)" data-i="wcBtn">See packages</a>
         </div>
@@ -308,15 +309,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <section id="weddings">
   <div class="wrap">
     <div class="title"><div class="eyebrow" data-i="wedEyebrow">Wedding collection 2026 / 2027</div><h2 class="h" data-i="wedH">Wedding packages</h2><div class="rule"></div></div>
+
     <div class="tabs" role="tablist">
       <button type="button" class="on" data-p="0">I · 2h</button>
       <button type="button" data-p="1">II · 5h</button>
       <button type="button" data-p="2">III · 8h</button>
-      <button type="button" data-p="3">IV · 10h</button>
     </div>
 
     <div class="pkg on">
-      <div class="slides pslides"><img src="img/cer.jpg" alt="Wedding vows by the bay window" class="on" style="object-position:55% center"><img src="img/p25.jpg" alt="Wedding photo"><img src="img/p24.jpg" alt="Wedding photo"><img src="img/p22.jpg" alt="Wedding photo"></div>
+      <img src="img/cer.jpg" alt="Wedding vows by the bay window" style="object-position:55% center">
       <div class="in">
         <div class="eyebrow" style="color:var(--p2)">Wedding package I</div>
         <h3 class="h">Ceremony + Love Story</h3>
@@ -336,7 +337,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     </div>
 
     <div class="pkg">
-      <div class="slides pslides"><img src="img/p23.jpg" alt="Wedding photo" class="on"><img src="img/p20.jpg" alt="Wedding photo"><img src="img/p21.jpg" alt="Wedding photo"><img src="img/fd2.jpg" alt="Wedding photo"><img src="img/fd4.jpg" alt="Wedding photo"></div>
+      <img src="img/p23.jpg" alt="Kiss under the veil in the park">
       <div class="in">
         <div class="eyebrow" style="color:var(--p2)">Wedding package II</div>
         <h3 class="h">Wedding Day</h3>
@@ -355,7 +356,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     </div>
 
     <div class="pkg">
-      <div class="slides pslides"><img src="img/p18.jpg" alt="Wedding photo" class="on"><img src="img/p11.jpg" alt="Wedding photo"><img src="img/fd3.jpg" alt="Wedding photo"><img src="img/p14.jpg" alt="Wedding photo"><img src="img/p15.jpg" alt="Wedding photo"></div>
+      <div class="slides pslides"><img src="img/fd1.jpg" alt="Full wedding day" class="on"><img src="img/fd2.jpg" alt="Full wedding day"><img src="img/fd3.jpg" alt="Full wedding day"></div>
       <div class="in">
         <div class="eyebrow" style="color:var(--p2)">Wedding package III</div>
         <h3 class="h">Full Wedding Day</h3>
@@ -372,25 +373,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <div class="foot"><div class="big"><small data-i="from">FROM</small>£1400</div><a class="btn" href="#contact" data-i="book">Book</a></div>
       </div>
     </div>
-
-    <div class="pkg">
-      <div class="slides pslides"><img src="img/p10.jpg" alt="Wedding photo" class="on"><img src="img/p16.jpg" alt="Wedding photo"><img src="img/p17.jpg" alt="Wedding photo"><img src="img/p9.jpg" alt="Wedding photo"><img src="img/p1.jpg" alt="Wedding photo"></div>
-      <div class="in">
-        <div class="eyebrow" style="color:var(--p2)">Wedding package IV</div>
-        <h3 class="h">The Complete Story</h3>
-        <div class="hrs" data-i="upTo10">Up to 10 hours</div>
-        <ul>
-          <li data-i="w4a">Everything in the Full Wedding Day package</li>
-          <li data-i="w4b">Complimentary pre-wedding shoot</li>
-          <li data-i="w4c">Evening celebration and party</li>
-          <li data-i="w4d">Approx. 750 edited images, including retouched highlights</li>
-          <li data-i="peek">Sneak peek within 48 hours</li>
-          <li data-i="album">A wedding album as a gift</li>
-          <li data-i="consult">Planning consultation before the wedding</li>
-        </ul>
-        <div class="foot"><div class="big"><small data-i="from">FROM</small>£2000</div><a class="btn" href="#contact" data-i="book">Book</a></div>
-      </div>
-    </div>
+    
 
     <div class="addons">
       <div><b>£150</b><span data-i="ad1">Extra hour</span></div>
@@ -400,7 +383,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     </div>
     <div class="wcustom">
       <h4 data-i="wcH">Need a different length?</h4>
-      <p data-i="wcP">Every wedding is different, so the hours can be tailored to your day, for example 3 or 6 hours. Just tell me what you need and we’ll put together the right package. Every package includes a consultation before the wedding, so we can get to know each other and plan the day together.</p>
+      <p data-i="wcP">Every wedding is different, so the hours can be tailored to your day, for example 3, 6 or more than 10 hours. Just message me on Instagram and we’ll discuss everything during the consultation and choose the right package. Every package includes a consultation before the wedding, so we can get to know each other and plan the day together.</p>
     </div>
     <p class="small" data-i="wedNote">Gallery delivered within 1–2 weeks · 30% booking fee secures your date · Travel costs are charged separately</p>
   </div>
@@ -519,10 +502,10 @@ heroEyebrow:"Весілля · Love story · Сім'ї",heroH:"Ваша істо
 aboutEyebrow:"Приємно познайомитись",aboutH:"Привіт, я Анна",aboutP1:"Я українська фотографка й контент-мейкерка з Херефорда. Я закохалася у фотографію в день, коли купила свою першу камеру, і вже за рік знімала весілля.",aboutP3:"Я знімаю весілля, love story, сімейні фотосесії, вагітність, хрестини та індивідуальні портрети. Також створюю фотоконтент для ретритів, бізнес-кемпів, подій і брендів.",aboutP2:"Також я ведуча тревел-програми на телебаченні, тож знаю, як допомогти людям розслабитися перед камерою. Я підкажу кожну позу, допоможу з образами й локаціями та зловлю справжні емоції між кадрами.",stYears:"роки досвіду",stWeddings:"весіль",stWeeks:"тижні до готових фото",
 svcEyebrow:"Що я пропоную",svcH:"Фотосесії",loveT:"Love story · Вагітність",ptT:"Портретна",pt2:"40–60 фото в обробці, 25+ у ретуші",pt3:"Особисті, бренд- і тревел-портрети",love6:"Зйомка пропозиції: £230",love1:"1 година зйомки",love2:"70–100 фото в обробці, 35+ у ретуші",love3:"Допомога з позуванням + приклади",love4:"Допомога з образами й локацією",love5:"Персональна онлайн-галерея",travelIn:"Витрати на дорогу оплачуються окремо",
 famT:"Сімейна",fam1:"1 година зйомки",famP:"від £200",fam2:"70–100 фото в обробці, 35+ у ретуші",fam3:"Сім'ї, діти й кілька поколінь",fam4:"Допомога з образами й локацією",fam5:"Персональна онлайн-галерея",
-wedCardT:"Весілля",wedCardP:"від £400",wc1:"Від 2 годин до цілого дня",wc2:"Перші фото за 48 годин",wc3:"Галерея за 1–2 тижні",wc4:"Альбом у подарунок у пакетах на 8 і 10 годин",wcBtn:"Дивитись пакети",cotsT:"Фото-дні в Cotswold",cotsP:"від £120",cots1:"Маленькі групи по 3–4 людини",cots2:"Фотосесія біля красивого готелю",cots3:"Поїздка селами Cotswold",cots4:"Ідеально для гостей Британії",cotsN:"Дати анонсую в Instagram",
+wedCardT:"Весілля",wedCardP:"від £400",wc1:"Від 2 годин до цілого дня",wc2:"Перші фото за 48 годин",wc3:"Галерея за 1–2 тижні",wc4:"Альбом у подарунок у пакеті на 8 годин",wcBtn:"Дивитись пакети",cotsT:"Фото-дні в Cotswold",cotsP:"від £120",cots1:"Маленькі групи по 3–4 людини",cots2:"Фотосесія біля красивого готелю",cots3:"Поїздка селами Cotswold",cots4:"Ідеально для гостей Британії",cotsN:"Дати анонсую в Instagram",
 wedEyebrow:"Весільна колекція 2026 / 2027",wedH:"Весільні пакети",upTo2:"До 2 годин",upTo5:"До 5 годин",upTo8:"До 8 годин",upTo10:"До 10 годин",
 w1a:"Весільна церемонія",w1b:"Конфетті та групові фото з рідними й гостями",w1c:"Love story пари",w1d:"120–150 фото в обробці, включно з ретушшю",peek:"Перші фото протягом 48 годин",gallery:"Персональна онлайн-галерея",prints:"Набір художніх принтів",from:"ВІД",book:"Забронювати",
-w2b:"Фуршет, конфетті та групові фото",w2c:"Повна фотосесія пари зі зміною локації",w2d:"250–350 фото в обробці, включно з ретушшю",consult:"Консультація перед весіллям",wcH:"Потрібна інша тривалість?",wcP:"Кожне весілля різне, тому кількість годин узгоджується під ваш день — наприклад, 3 або 6 годин. Просто напишіть, що вам потрібно, і ми складемо відповідний пакет. У кожен пакет входить консультація перед весіллям, щоб ми познайомилися й разом спланували день.",
+w2b:"Фуршет, конфетті та групові фото",w2c:"Повна фотосесія пари зі зміною локації",w2d:"250–350 фото в обробці, включно з ретушшю",consult:"Консультація перед весіллям",wcH:"Потрібна інша тривалість?",wcP:"Кожне весілля різне, тому кількість годин узгоджується під ваш день — наприклад, 3, 6 або більше 10 годин. Просто напишіть мені в Instagram, ми все обговоримо на консультації й підберемо відповідний пакет. У кожен пакет входить консультація перед весіллям, щоб ми познайомилися й разом спланували день.",
 w3a:"Ранкові збори нареченої та нареченого",w3b:"Церемонія, фуршет і групові фото",w3c:"Банкет, промови та перший танець",w3d:"Близько 600 фото в обробці, включно з ретушшю",album:"Весільний альбом у подарунок",
 w4a:"Усе з пакета Full Wedding Day",w4b:"Фотосесія до весілля в подарунок",w4c:"Вечірнє святкування та вечірка",w4d:"Близько 750 фото в обробці, включно з ретушшю",
 ad1:"Додаткова година",ad2p:"від £150",ad2:"Весільний альбом",ad3:"Рілси / короткі відео",ad4p:"від £300",ad4:"Другий фотограф",wedNote:"Галерея за 1–2 тижні · Передоплата 30% закріплює дату · Витрати на дорогу оплачуються окремо",
