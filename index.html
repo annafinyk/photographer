@@ -109,6 +109,18 @@ section{padding:110px 0}
 .pkg .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .pkg .big{font-family:'Rubik',sans-serif;font-weight:300;font-size:52px;line-height:1;color:var(--g)}
 
+
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
+.xbox{border:1px solid rgba(244,239,230,.28);padding:34px 32px;display:flex;flex-direction:column;background:transparent}
+.xbox h3{margin:6px 0 4px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(26px,2.4vw,34px)}
+.xbox .price{font-family:'Cormorant Garamond',serif;font-size:40px;margin:4px 0 14px}
+.xbox ul{margin:0 0 16px;padding-left:18px;line-height:1.8;font-size:15px}
+.xbox .note{margin-top:auto;font-size:13px;opacity:.7}
+.xtour{margin-top:22px}
+.xtour ul{columns:2;column-gap:36px}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.xtour ul{columns:1}}
+.xbest{border-color:#d9b8a8;border-width:1.5px}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){.extras{grid-template-columns:1fr}}
 .wcustom{margin:34px auto 0;max-width:760px;text-align:center;padding:30px 28px;border:1px solid rgba(58,69,53,.18)}
 .wcustom h4{margin:0 0 10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:26px;color:var(--p2)}
 .wcustom p{margin:0;font-size:15px;line-height:1.7}
@@ -171,10 +183,24 @@ section{padding:110px 0}
 .contact small{display:block;font-size:13px;opacity:.8;letter-spacing:.08em}
 footer{background:var(--g2);color:var(--c);padding:28px 0;font-size:11px;letter-spacing:.25em;text-transform:uppercase}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;opacity:.8}
+
+#bf{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#1d1d1b;color:#f4efe6;display:none;align-items:center;justify-content:center;gap:18px;padding:14px 52px 14px 20px;font-size:14px;letter-spacing:.02em;text-align:center;flex-wrap:wrap}
+#bf.on{display:flex}
+#bf b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:20px;color:#d9b8a8}
+#bf a.bfgo{background:#d9b8a8;color:#1d1d1b;padding:8px 18px;text-decoration:none;font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.12em}
+#bf button{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:0;color:#f4efe6;font-size:22px;cursor:pointer;line-height:1}
+@media(max-width:860px),(pointer:coarse) and (max-width:1400px){#bf{font-size:13px;gap:10px;padding:12px 44px 12px 14px}#bf b{font-size:18px}}
 </style>
 </head>
 <body>
 
+<div id="bf" role="region" aria-label="Black Friday offer">
+  <b data-i="bfT">Black Friday</b>
+  <span data-i="bfP">27–30 Nov · Family, love story or portrait · only 6 spots at £160</span>
+  <a class="bfgo" href="#contact" data-i="bfBtn">Book a spot</a>
+  <button type="button" aria-label="Close" onclick="this.parentNode.classList.remove('on');try{sessionStorage.setItem('bfx','1')}catch(e){}">×</button>
+</div>
+<script>(function(){var n=Date.now(),a=Date.UTC(2026,10,27,0,0),b=Date.UTC(2026,10,30,23,59,59),x=false;try{x=sessionStorage.getItem('bfx')}catch(e){}if(n>b||x)return;var bf=document.getElementById('bf');if(n<a){var t=bf.querySelector('[data-i="bfT"]'),p=bf.querySelector('[data-i="bfP"]'),g=bf.querySelector('[data-i="bfBtn"]');t.dataset.i='bfT2';t.textContent='Black Friday is coming';p.dataset.i='bfP2';p.textContent='27–30 Nov · Family, love story or portrait · only 6 spots at £160';g.dataset.i='bfBtn2';g.textContent='Message me';g.href='https://instagram.com/annafinyk.ph';g.target='_blank'}bf.classList.add('on')})();</script>
 <nav id="nav">
   <div class="wrap navin">
     <a class="logo" href="#top" aria-label="Anna Finyk"><b>PHOTOGRAPHER</b><span>Anna Finyk</span></a>
@@ -258,7 +284,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         </div>
       </article>
       <article class="card">
-        <div class="slides"><img src="img/pt1.jpg" alt="Portrait photoshoot" class="on"><img src="img/pt17.jpg" alt="Studio portrait on an armchair"><img src="img/pt2.jpg" alt="Portrait photoshoot"><img src="img/pt4.jpg" alt="Portrait photoshoot"><img src="img/pt5.jpg" alt="Portrait photoshoot"><img src="img/pt6.jpg" alt="Portrait photoshoot in London"><img src="img/pt7.jpg" alt="Portrait photoshoot in London"><img src="img/pt8.jpg" alt="Portrait photoshoot in London"><img src="img/pt9.jpg" alt="Black and white portrait in a car"><img src="img/pt11.jpg" alt="Portrait by a countryside fence"><img src="img/pt12.jpg" alt="Portrait with horses"><img src="img/pt14.jpg" alt="Portrait by the window"><img src="img/pt15.jpg" alt="Studio portrait details"></div>
+        <div class="slides"><img src="img/pt18.jpg" alt="Portrait on horseback in autumn" class="on"><img src="img/pt19.jpg" alt="Portrait with a horse"><img src="img/pt20.jpg" alt="Walking across an autumn field"><img src="img/pt1.jpg" alt="Portrait photoshoot"><img src="img/pt17.jpg" alt="Studio portrait on an armchair"><img src="img/pt2.jpg" alt="Portrait photoshoot"><img src="img/pt4.jpg" alt="Portrait photoshoot"><img src="img/pt5.jpg" alt="Portrait photoshoot"><img src="img/pt6.jpg" alt="Portrait photoshoot in London"><img src="img/pt7.jpg" alt="Portrait photoshoot in London"><img src="img/pt8.jpg" alt="Portrait photoshoot in London"><img src="img/pt9.jpg" alt="Black and white portrait in a car"><img src="img/pt11.jpg" alt="Portrait by a countryside fence"><img src="img/pt12.jpg" alt="Portrait with horses"><img src="img/pt14.jpg" alt="Portrait by the window"><img src="img/pt15.jpg" alt="Studio portrait details"></div>
         <div class="in">
           <h3 data-i="ptT">Portrait</h3>
           <div class="price">£180</div>
@@ -302,6 +328,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
           <a class="btn" href="#weddings" style="margin-top:auto;align-self:flex-start;color:var(--g)" data-i="wcBtn">See packages</a>
         </div>
       </article>
+    </div>
+    <div class="extras">
+      <div class="xbox">
+        <div class="eyebrow" data-i="miniEb">Short &amp; sweet</div>
+        <h3 data-i="miniT">Mini shoot</h3>
+        <div class="price">£100</div>
+        <ul>
+          <li data-i="mini1">30 minutes of shooting</li>
+          <li data-i="mini2">Up to 30 edited photos</li>
+          <li data-i="mini3">One location, posing guidance included</li>
+        </ul>
+        <div class="note" data-i="travelIn">Travel costs are charged separately</div>
+      </div>
+      <div class="xbox xbest">
+        <div class="eyebrow" data-i="bunEb">Best value</div>
+        <h3 data-i="bunT">3 sessions package</h3>
+        <div class="price"><span data-i="bunP">£540</span> <s style="opacity:.5;font-size:.6em">£600</s></div>
+        <ul>
+          <li data-i="bun1">3 full one-hour sessions, £180 each instead of £200</li>
+          <li data-i="bun2">Family or love story, mix as you like</li>
+          <li data-i="bun3">Use them any time within 12 months</li>
+          <li data-i="bun4">Paid in full when booking</li>
+        </ul>
+        <div class="note" data-i="travelIn">Travel costs are charged separately</div>
+      </div>
+    </div>
+    <div class="xbox xtour">
+      <div class="eyebrow" data-i="tourEb">For travellers</div>
+      <h3 data-i="tourT">Private Cotswolds photo tour</h3>
+      <div class="price" data-i="tourP">from £500</div>
+      <p data-i="tourIntro" style="margin:0 0 14px;line-height:1.7">A day in the most beautiful corners of the Cotswolds, with professional photos at every stop. You just enjoy it, I take care of everything else.</p>
+      <ul>
+        <li data-i="tour1">Pick-up from your hotel and drop-off back, in my car, no need to worry about transport</li>
+        <li data-i="tour2">The best-known villages and secret spots only locals know</li>
+        <li data-i="tour3">A professional photoshoot at every location</li>
+        <li data-i="tour4">Personal guide and company throughout the day</li>
+        <li data-i="tour5">I'll choose and book a table at one of the best restaurants for dinner</li>
+      </ul>
+      <div class="note" data-i="tourNote">Dinner is not included in the price</div>
     </div>
   </div>
 </section>
@@ -505,7 +570,7 @@ famT:"Сімейна",fam1:"1 година зйомки",famP:"від £200",fam
 wedCardT:"Весілля",wedCardP:"від £400",wc1:"Від 2 годин до цілого дня",wc2:"Перші фото за 48 годин",wc3:"Галерея за 1–2 тижні",wc4:"Альбом у подарунок у пакеті на 8 годин",wcBtn:"Дивитись пакети",cotsT:"Фото-дні в Cotswold",cotsP:"від £120",cots1:"Маленькі групи по 3–4 людини",cots2:"Фотосесія біля красивого готелю",cots3:"Поїздка селами Cotswold",cots4:"Ідеально для гостей Британії",cotsN:"Дати анонсую в Instagram",
 wedEyebrow:"Весільна колекція 2026 / 2027",wedH:"Весільні пакети",upTo2:"До 2 годин",upTo5:"До 5 годин",upTo8:"До 8 годин",upTo10:"До 10 годин",
 w1a:"Весільна церемонія",w1b:"Конфетті та групові фото з рідними й гостями",w1c:"Love story пари",w1d:"120–150 фото в обробці, включно з ретушшю",peek:"Перші фото протягом 48 годин",gallery:"Персональна онлайн-галерея",prints:"Набір художніх принтів",from:"ВІД",book:"Забронювати",
-w2b:"Фуршет, конфетті та групові фото",w2c:"Повна фотосесія пари зі зміною локації",w2d:"250–350 фото в обробці, включно з ретушшю",consult:"Консультація перед весіллям",wcH:"Потрібна інша тривалість?",wcP:"Кожне весілля різне, тому кількість годин узгоджується під ваш день — наприклад, 3, 6 або більше 10 годин. Просто напишіть мені в Instagram, ми все обговоримо на консультації й підберемо відповідний пакет. У кожен пакет входить консультація перед весіллям, щоб ми познайомилися й разом спланували день.",
+w2b:"Фуршет, конфетті та групові фото",w2c:"Повна фотосесія пари зі зміною локації",w2d:"250–350 фото в обробці, включно з ретушшю",consult:"Консультація перед весіллям",tourEb:"Для мандрівників",tourT:"Приватний фототур Котсволдсом",tourP:"від £500",tourIntro:"День у найкрасивіших куточках Котсволдсу з професійними фото на кожній локації. Ви просто насолоджуєтеся, а про все інше подбаю я.",tour1:"Забираємо вас із готелю й відвозимо назад на моїй машині — не треба думати про транспорт",tour2:"Найвідоміші села та секретні локації, які знають лише місцеві",tour3:"Професійна фотосесія на кожній локації",tour4:"Супровід протягом усього дня",tour5:"Підберу й забронюю столик в одному з найкращих ресторанів на вечерю",tourNote:"Вечеря не входить у вартість",miniEb:"Коротко й легко",miniT:"Міні-фотосесія",mini1:"30 хвилин зйомки",mini2:"До 30 фото в обробці",mini3:"Одна локація, допомога з позуванням",bunEb:"Найвигідніше",bunT:"Пакет із 3 фотосесій",bunP:"£540",bun1:"3 повні фотосесії по 1 годині — по £180 замість £200",bun2:"Сімейні або love story, можна поєднувати",bun3:"Можна використати протягом 12 місяців",bun4:"Оплата повністю при бронюванні",bfT:"Чорна п’ятниця",bfP:"27–30 листопада · Сімейна, love story або портрет · лише 6 місць по £160",bfBtn:"Забронювати",bfT2:"Скоро Чорна п’ятниця",bfP2:"27–30 листопада · Сімейна, love story або портрет · лише 6 місць по £160",bfBtn2:"Написати мені",wcH:"Потрібна інша тривалість?",wcP:"Кожне весілля різне, тому кількість годин узгоджується під ваш день — наприклад, 3, 6 або більше 10 годин. Просто напишіть мені в Instagram, ми все обговоримо на консультації й підберемо відповідний пакет. У кожен пакет входить консультація перед весіллям, щоб ми познайомилися й разом спланували день.",
 w3a:"Ранкові збори нареченої та нареченого",w3b:"Церемонія, фуршет і групові фото",w3c:"Банкет, промови та перший танець",w3d:"Близько 600 фото в обробці, включно з ретушшю",album:"Весільний альбом у подарунок",
 w4a:"Усе з пакета Full Wedding Day",w4b:"Фотосесія до весілля в подарунок",w4c:"Вечірнє святкування та вечірка",w4d:"Близько 750 фото в обробці, включно з ретушшю",
 ad1:"Додаткова година",ad2p:"від £150",ad2:"Весільний альбом",ad3:"Рілси / короткі відео",ad4p:"від £300",ad4:"Другий фотограф",wedNote:"Галерея за 1–2 тижні · Передоплата 30% закріплює дату · Витрати на дорогу оплачуються окремо",
